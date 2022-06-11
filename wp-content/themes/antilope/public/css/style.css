@@ -367,3 +367,157 @@ input:checked ~ .layer3, input:checked {
   margin-left: 4rem;
   color: #84572A;
 }
+
+.layout > h2 {
+  margin-top: 8rem;
+}
+
+.modules__wrapper, .publications__wrapper {
+  margin-top: -50px;
+  background-color: #E9EDC9;
+  margin-right: -4rem;
+  padding-bottom: 3.6rem;
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 3.6rem;
+       column-gap: 3.6rem;
+  row-gap: 3.6rem;
+  flex-wrap: wrap;
+}
+
+.module a, .publication a {
+  text-decoration: none;
+  color: black;
+}
+.module__label, .publication__label {
+  max-width: 330px;
+}
+.module__title, .publication__title {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.module__fig, .publication__fig {
+  height: 370px;
+  max-width: 330px;
+}
+.module__thumb, .publication__thumb {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.svg-noair {
+  margin-left: -4rem;
+  position: relative;
+  top: 160px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (max-width: 374px) {
+  .module__label {
+    max-width: 200px;
+  }
+  .module__fig {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media (min-width: 800px) {
+  .modules__wrapper {
+    margin-left: 14rem;
+  }
+}
+.singleModule__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: start;
+  -moz-column-gap: 4.6rem;
+       column-gap: 4.6rem;
+  row-gap: 4.6rem;
+  margin-top: 8rem;
+}
+.singleModule__fig {
+  max-width: 800px;
+  height: 450px;
+}
+.singleModule__thumb {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.singleModule__content {
+  max-width: 370px;
+  line-height: 2.01rem;
+}
+.singleModule__desc {
+  margin-top: 2.4rem;
+}
+
+.ici {
+  display: grid;
+}
+
+.singleModule__fig, .singleModule__logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.singleModule__fig {
+  z-index: -2;
+}
+
+.singleModule__logo img {
+  width: 100px;
+  height: auto;
+  margin-top: -50px;
+}
+
+.reste {
+  margin-top: 12.1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 3.6rem;
+       column-gap: 3.6rem;
+  row-gap: 5.4rem;
+  margin-bottom: 12rem;
+}
+
+.reste p {
+  line-height: 2.01rem;
+}
+
+.reste__img {
+  max-width: 400px;
+  height: 400px;
+}
+
+.reste__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.singleModule__txt {
+  background-color: #E9EDC9;
+  max-width: 400px;
+  padding: 4rem;
+}
+.singleModule__txt h3 {
+  margin-bottom: 2.4rem;
+}
+.singleModule__txt p + h3 {
+  margin-top: 3.6rem;
+}
+
+@media (max-width: 650px) {
+  .reste {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

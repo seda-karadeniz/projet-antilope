@@ -9,7 +9,7 @@
         </figure>
 
         <div class="publication__label">
-            <h5 class="publication__title subTitle"><?= get_the_title(); ?></h5>
+            <p class="publication__title "><?= get_the_title(); ?></p>
             <p class="publication__date">Publié le <time class="publication__time" datetime="<?= date('c', strtotime(get_field('publication_date', false, false))); ?>">
                     <?= ucfirst(date_i18n('d F Y', strtotime(get_field('publication_date', false, false)))); ?>
                 </time></p>

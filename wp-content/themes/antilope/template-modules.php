@@ -4,7 +4,7 @@
     <main class="layout modules">
 
 
-        <h2 class="templateProjects__title title" role="heading" aria-level="2" ><?= get_the_title(); ?></h2>
+        <h2 class="templateProjects__title title" role="heading" aria-level="2" >Tous nos modules</h2>
 
         <div class="svg-noair">
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="130" viewBox="0 0 60 130">
