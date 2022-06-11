@@ -13,23 +13,39 @@
         </div>
 
         <aside class="contact__info">
-            <h3 class="contact__info-title">Nos informations</h3>
+            <h3 class="hidden">Nos informations</h3>
             <div class="contact__issep">
-                <h3 class="contact__hepl-title" role="heading" aria-level="3">ISSeP</h3>
-                <p class="contact__issep-info" itemprop="adress">
-                <?= get_field('info_issep')?>
+                <h3 class="contact__issep-subTitle subTitle" role="heading" aria-level="3">ISSeP</h3>
 
-                </p>
+                <ul class="contact__issep-info">
+                    <?php if (get_field('info_supp_issep')):?>
+                        <li class="contact__info-supp"><?= get_field('info_supp_issep')?></li>
+                    <?php endif;?>
+
+                    <?php if (get_field('adress_issep')):?>
+                        <li class="contact__info-supp"><?= get_field('adress_issep')?></li>
+                    <?php endif;?>
+                    <?php if (get_field('email_issep')):?>
+                        <li class="contact__info-supp">
+                            <a href="mailto:<?= get_field('email_issep'); ?>" class="mail" itemprop="email"><?= get_field('email_issep'); ?></a>
+                        </li>
+                    <?php endif;?>
+
+                    <?php if (get_field('tel_issep')):?>
+                        <li class="contact__info-supp"><a href="tel:<?= get_field('tel_issep'); ?>" class="num"><?= get_field('tel_issep'); ?></a></li>
+                    <?php endif;?>
+
+                </ul>
             </div>
             <div class="contact__hepl">
-                <h3 class="contact__hepl-title" role="heading" aria-level="3">Service d’&eacute;lectronique et des syst&egrave;mes embarqu&eacute;s de la HEPL</h3>
-                <p class="contact__issep-info" itemprop="adress">
+                <h3 class="contact__hepl-subTitle subTitle" role="heading" aria-level="3">Service d’&eacute;lectronique et des syst&egrave;mes embarqu&eacute;s de la HEPL</h3>
+                <p class="contact__hepl-info" itemprop="adress">
                     <?= get_field('info_hepl')?>
                 </p>
             </div>
         </aside>
         <aside>
-            <h3 class="contact__link" role="heading" aria-level="3">Quelques liens utiles</h3>
+            <h3 class="contact__link-subTitle subTitle" role="heading" aria-level="3">Quelques liens utiles</h3>
             <div>
                 <h4 class="contact__link-sites" role="heading" aria-level="4">
                     Sites internet
@@ -64,7 +80,7 @@
         </aside>
 
             <section>
-                <h3 class="contact__form-title">Formulaire de contact</h3>
+                <h3 class="contact__form-subTitle subTitle" aria-level="3" role="heading">Formulaire de contact</h3>
                 <?php if(! isset($_SESSION['contact_form_feedback']) || ! $_SESSION['contact_form_feedback']['success']) : ?>
                     <form action="<?= get_home_url(); ?>/wp-admin/admin-post.php" method="POST" class="contact__form form" id="contact">
                         <?php if(isset($_SESSION['contact_form_feedback'])) : ?>

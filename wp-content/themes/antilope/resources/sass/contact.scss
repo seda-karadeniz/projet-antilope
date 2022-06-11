@@ -1,0 +1,27 @@
+.contact{
+  &__info{
+    margin-left: 2rem;
+    margin-top: -5.4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3.6rem;
+  }
+  &__hepl, &__issep{
+    max-width: 370px;
+  }
+  .subTitle{
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .contact{
+    &__info{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 3.6rem;
+    }
+
+
+  }
+}
