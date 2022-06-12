@@ -3,17 +3,31 @@
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
     <main class="layout contact" itemscope itemtype="https://schema.org/Organization">
         <h2 class="contact__title title">Contactez&#45;nous</h2>
-        <div class="svg-noair">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="130" viewBox="0 0 60 130">
-                <g id="Composant_1_3" data-name="Composant 1 – 3" transform="translate(0 130) rotate(-90)">
-                    <text id="NO" transform="translate(0 36)" font-size="48" font-family="AquaGrotesque, Aqua Grotesque"><tspan x="0" y="0">NO</tspan></text>
-                    <text id="Air" transform="translate(62 49)" font-size="43" font-family="AquaGrotesque, Aqua Grotesque"><tspan x="0" y="0">Air</tspan></text>
-                </g>
-            </svg>
-        </div>
+
 
         <aside class="contact__info">
             <h3 class="hidden">Nos informations</h3>
+            <div class="contact__hepl">
+                <h3 class="contact__hepl-subTitle subTitle" role="heading" aria-level="3">Service d’&eacute;lectronique et des syst&egrave;mes embarqu&eacute;s de la HEPL</h3>
+                <ul class="contact__hepl-info">
+                    <?php if (get_field('info_supp_hepl')):?>
+                        <li class="contact__info-supp"><?= get_field('info_supp_hepl')?></li>
+                    <?php endif;?>
+
+                    <?php if (get_field('adress_hepl')):?>
+                        <li class="contact__info-supp"><?= get_field('adress_hepl')?></li>
+                    <?php endif;?>
+                    <?php if (get_field('email_hepl')):?>
+                        <li class="contact__info-supp">
+                            <a href="mailto:<?= get_field('email_hepl'); ?>" class="mail" itemprop="email"><?= get_field('email_hepl'); ?></a>
+                        </li>
+                    <?php endif;?>
+
+                    <?php if (get_field('tel_hepl')):?>
+                        <li class="contact__info-supp"><a href="tel:<?= get_field('tel_hepl'); ?>" class="num"><?= get_field('tel_hepl'); ?></a></li>
+                    <?php endif;?>
+                </ul>
+            </div>
             <div class="contact__issep">
                 <h3 class="contact__issep-subTitle subTitle" role="heading" aria-level="3">ISSeP</h3>
 
@@ -34,17 +48,12 @@
                     <?php if (get_field('tel_issep')):?>
                         <li class="contact__info-supp"><a href="tel:<?= get_field('tel_issep'); ?>" class="num"><?= get_field('tel_issep'); ?></a></li>
                     <?php endif;?>
-
                 </ul>
             </div>
-            <div class="contact__hepl">
-                <h3 class="contact__hepl-subTitle subTitle" role="heading" aria-level="3">Service d’&eacute;lectronique et des syst&egrave;mes embarqu&eacute;s de la HEPL</h3>
-                <p class="contact__hepl-info" itemprop="adress">
-                    <?= get_field('info_hepl')?>
-                </p>
-            </div>
+
         </aside>
-        <aside>
+        <div class="contact__aside-form">
+        <aside class="contact__link">
             <h3 class="contact__link-subTitle subTitle" role="heading" aria-level="3">Quelques liens utiles</h3>
             <div>
                 <h4 class="contact__link-sites" role="heading" aria-level="4">
@@ -123,7 +132,7 @@
                     <p id="contact" class="message-envoi btn"><?= __('Merci ! Votre message a bien été envoyé.','dw'); ?></p>
                     <?php unset($_SESSION['contact_form_feedback']); endif; ?>
             </section>
-
+        </div>
 
     </main>
 <?php endwhile; endif; ?>

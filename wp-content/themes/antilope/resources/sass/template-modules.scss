@@ -1,15 +1,16 @@
 .layout > h2{
-  margin-top: 8rem;
+  margin-top: 8.1rem;
 }
 .modules__wrapper, .publications__wrapper{
-  margin-top: -50px;
-  background-color: $bg_color;
-  margin-right: -4rem;
 
+  background-color: $bg_color;
+
+
+  margin-top: 5.4rem;
   padding-bottom:3.6rem ;
   display: flex;
   justify-content:end;
-  column-gap: 3.6rem;
+  column-gap: 5.4rem;
   row-gap: 3.6rem;
   flex-wrap: wrap;
 }
@@ -19,7 +20,7 @@
     color: black;
   }
   &__label{
-    max-width: 330px;
+    max-width: 33rem;
   }
   &__title{
     margin-top: 0.8rem;
@@ -27,8 +28,8 @@
   }
 
   &__fig{
-    height: 370px;
-    max-width: 330px;
+    height: 37rem;
+    max-width: 33rem;
   }
   &__thumb{
     width:100% ;
@@ -37,31 +38,29 @@
 
   }
 }
-.svg-noair{
-  margin-left: -4rem;
-  position: relative;
-  top: 160px;
-  width: fit-content;
-}
+
 @media (max-width: 374px) {
 
   .module{
 
     &__label{
-      max-width: 200px;
+      max-width: 20rem;
     }
 
     &__fig{
-      width: 200px;
-      height:300px;
+      width: 20rem;
+      height:30rem;
     }
 
 
   }
 }
 @media (min-width: 800px) {
-  .modules__wrapper{
+  .modules__wrapper, .publications__wrapper{
     margin-left: 14rem;
+    padding-right: 8.1rem;
+    padding-left: 8.1rem;
+
   }
 }
 

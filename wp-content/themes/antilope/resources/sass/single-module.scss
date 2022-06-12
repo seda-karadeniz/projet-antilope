@@ -13,8 +13,8 @@
 
 }
   &__fig{
-  max-width: 800px;
-  height: 450px;
+  max-width: 80rem;
+  height: 45rem;
 }
   &__thumb{
   width: 100%;
@@ -23,8 +23,8 @@
 
 }
   &__content{
-  max-width: 370px;
-    line-height: 2.01rem;
+  max-width: 37rem;
+    line-height: 2.7rem;
 
 
   }
@@ -48,7 +48,7 @@
   z-index: -2;
 }
 .singleModule__logo img{
-  width: 100px;
+  width: 10rem;
   height: auto;
   margin-top: -50px;
 }
@@ -62,12 +62,9 @@
   margin-bottom: 12rem;
 }
 .reste p{
-  line-height: 2.01rem;
+  line-height: 2.7rem;
 }
-.reste__img{
-  max-width: 400px;
-  height: 400px;
-}
+
 .reste__img img{
   width: 100%;
   height: 100%;
@@ -75,7 +72,7 @@
 }
 .singleModule__txt{
   background-color: $bg_color;
-  max-width: 400px;
+  max-width: 40rem;
   padding: 4rem;
   h3{
     margin-bottom: 2.4rem;

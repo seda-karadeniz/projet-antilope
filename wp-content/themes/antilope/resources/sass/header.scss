@@ -24,7 +24,7 @@ nav.nav li a:after {
   position: absolute;
   width: 40%;
   transform: scaleX(0);
-  height: 2px;
+  height: 0.2rem;
   bottom: -0.7rem;
   left: 0;
   background-color: $input_color;
@@ -57,11 +57,11 @@ nav.nav li a:hover:after {
 
 
    .menuOpen svg{
-    width: 20px;
+    width: 2rem;
     height: auto;
   }
   .menuClose svg{
-    width: 30px;
+    width: 3rem;
     height: auto;
 }
   .menuOpen{
@@ -104,7 +104,7 @@ nav.nav li a:hover:after {
     row-gap: 2.4rem;
 
     background-color: $bg_color;
-    margin-right: -4Rem;
+    //margin-right: -4Rem;
     width: 100vw;
     height: 100vh;
   }
@@ -121,7 +121,7 @@ nav.nav li a:hover:after {
 
   }
 
-@media (min-width: 650px){
+@media (min-width: 800px){
 
   .nav{
     &__container{
@@ -139,9 +139,9 @@ nav.nav li a:hover:after {
     position: absolute;
     overflow: hidden;
     clip:rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
+    height: 0.1rem;
+    width: 0.1rem;
+    margin: -0.1rem;
     padding: 0;
     border:0;
   }

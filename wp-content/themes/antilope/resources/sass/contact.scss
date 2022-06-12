@@ -1,27 +1,106 @@
+
 .contact{
+  &__title{
+    margin-bottom: 5.4rem;
+  }
   &__info{
-    margin-left: 2rem;
-    margin-top: -5.4rem;
-    display: grid;
-    grid-template-columns: 1fr;
+    //margin-left: 2rem;
+    //margin-top: -5.4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     row-gap: 3.6rem;
+    column-gap: 3.6rem;
+    background-color: $bg_color;
+    padding: 3.6rem;
   }
   &__hepl, &__issep{
-    max-width: 370px;
+    max-width: 37rem;
   }
   .subTitle{
     margin-bottom: 2.4rem;
   }
-}
-
-@media (min-width: 650px) {
-  .contact{
-    &__info{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      column-gap: 3.6rem;
-    }
-
-
+  li{
+    margin-bottom: 1.6rem;
+    font-size: $font_size;
   }
+  &__aside-form{
+    margin-top: 5.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12.1rem;
+    row-gap: 5.4rem;
+  }
+
+  &__link{
+
+    background-color: $bg_color;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3.6rem;
+    h4{
+      font-size: $font_size;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    div{
+
+      margin-right: 4rem;
+      margin-bottom: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.6rem;
+      label{
+        font-size: $font_size;
+      }
+      input:not([type=checkbox]), textarea{
+        border: 2px solid $input_color;
+        background-color: white;
+        color: $input_color;
+        min-height: 3.6rem;
+        padding: 0.9rem;
+      }
+      input:focus::placeholder, textarea:focus::placeholder {
+        color: grey;
+      }
+
+      input[type=checkbox]{
+        opacity: 1;
+        width: 1rem;
+        margin-right: 2.4rem;
+      }
+      input:checked{
+        margin-left: 1rem;
+      }
+
+    }
+  }
+  button{
+    border: solid 2px $input_color;
+    background-color: white;
+    padding: 0.8rem 0;
+    cursor: pointer;
+  }
+
 }
+
+p.form__error{
+  color: #b71111;
+  font-size: 1.4rem;
+}
+p.message{
+  margin-bottom: 4rem;
+  text-align: center;
+}
+p.message-envoi{
+  margin-bottom: 9rem;
+}
+
+
+
+

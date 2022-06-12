@@ -1,10 +1,11 @@
+/*
 .footer{
   background-color: $bg_color;
-  margin: 100px -4rem 0 -4rem ;
+  //margin: 100px -4rem 0 -4rem ;
   padding-bottom: 2.4rem;
 
   &__rs{
-    width: 300px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,3 +35,35 @@
 
 
 
+*/
+.footer{
+  margin-top: 10rem;
+
+  &__body{
+    background-color: $bg_color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5.4rem 5.4rem;
+  }
+  &__rs{
+    padding: 5.4rem;
+    text-align: center;
+    background-color: white;
+
+  }
+  &__rs-para{
+    margin-bottom: 2.4rem;
+  }
+  &__privacy-btn{
+    margin-top: 3.6rem;
+  }
+}
+
+@media (max-width: 500px){
+  .footer__rs{
+    padding: 2.4rem;
+
+  }
+}
