@@ -9,8 +9,8 @@
             </figure>
 
             <div class="module__label">
-                <h5 class="module__title subTitle"><?= get_the_title(); ?></h5>
-                <p class="module__small-desc"><?= get_field('small_description'); ?></p>
+                <h5 class="module__title bold"><?= get_the_title(); ?></h5>
+                <p class="module__small-desc light"><?= get_field('small_description'); ?></p>
             </div>
 
         </div>

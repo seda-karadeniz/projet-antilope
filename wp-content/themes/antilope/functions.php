@@ -80,7 +80,7 @@ function dw_get_modules($count=20)
     $modules = new WP_Query([
         'post_type' => 'module',
         'posts_per_page' => $count,
-        'order' => 'DESC',
+        'order' => 'ASC',
     ]);
     return $modules;
 }
@@ -92,7 +92,7 @@ function dw_get_publications($count=20)
         'post_type' => 'publication',
         'posts_per_page' => $count,
         'orderby' => 'date',
-        'order' => 'ASC',
+        'order' => 'DESC',
     ]);
     return $publications;
 }

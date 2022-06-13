@@ -4,17 +4,17 @@
 .modules__wrapper, .publications__wrapper{
 
   background-color: $bg_color;
-
-
-  margin-top: 5.4rem;
+  margin-top: 8.1rem;
   padding-bottom:3.6rem ;
+  padding-top: 3.6rem;
   display: flex;
   justify-content:end;
   column-gap: 5.4rem;
-  row-gap: 3.6rem;
+  row-gap: 11.6rem;
   flex-wrap: wrap;
 }
 .module, .publication{
+  margin-top: -70px;
   a{
     text-decoration: none;
     color: black;
@@ -25,6 +25,10 @@
   &__title{
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
+    font-weight: 900;
+  }
+  .light{
+    font-weight: 300;
   }
 
   &__fig{

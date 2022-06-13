@@ -63,7 +63,7 @@
 
             </div>
         </section>
-        <div class="logos">
+        <div class="logos reveal">
 
             <?php
             $image = get_field('elec_logo');

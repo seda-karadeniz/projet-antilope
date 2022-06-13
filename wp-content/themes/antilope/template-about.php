@@ -46,7 +46,7 @@
                 <a href="<?= get_field('site_issep')?>" class="about__link-inge">Issep</a>
             </div>
         </section>
-        <a href="modules" class="about__module-btn btn">Nos modules</a>
+        <a href="modules" class="about__module-btn btn reveal">Nos modules</a>
 
 
     </main>

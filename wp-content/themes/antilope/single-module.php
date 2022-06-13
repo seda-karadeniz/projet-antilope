@@ -99,7 +99,7 @@
             <?php endif;?>
 
         </div>
-        <a href="modules" class="singleModule__btn btn">Retour vers la liste des modules</a>
+        <a href="modules" class="singleModule__btn btn reveal">Retour vers la liste des modules</a>
 
     </main>
 <?php endwhile; endif; ?>

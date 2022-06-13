@@ -24,7 +24,7 @@ nav.nav li a:after {
   position: absolute;
   width: 40%;
   transform: scaleX(0);
-  height: 0.2rem;
+  height: 2px;
   bottom: -0.7rem;
   left: 0;
   background-color: $input_color;
@@ -49,79 +49,82 @@ nav.nav li a:hover:after {
 .logo svg{
   width: 150px;
   height: auto;
-
+  margin-left: 3.6rem;
 }
 
 
 
 
 
-   .menuOpen svg{
-    width: 2rem;
-    height: auto;
-  }
-  .menuClose svg{
-    width: 3rem;
-    height: auto;
+.menuOpen svg{
+  width: 20px;
+  height: auto;
 }
-  .menuOpen{
-    display: none;
-  }
+.menuClose svg{
+  width: 30px;
+  height: auto;
+}
+.menuOpen{
+  display: none;
+}
 
-  .navIcon{
-    display: grid;
-  }
+.navIcon{
+  display: grid;
+}
 
-  .layer1, .layer2, .layer3{
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .layer1{
-    z-index: 3;
-  }
-  input[type=checkbox]
-  {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(2.3); /* IE */
-    -moz-transform: scale(2.3); /* FF */
-    -webkit-transform: scale(2.3); /* Safari and Chrome */
-    -o-transform: scale(2.3); /* Opera */
-    transform: scale(2.3);
-    opacity: 0;
-    cursor: pointer;
-  }
+.layer1, .layer2, .layer3{
+  grid-column: 1;
+  grid-row: 1;
+}
+.layer1{
+  z-index: 3;
+}
+.layer1, .layer2{
+  margin-right: 3.6rem;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2.3); /* IE */
+  -moz-transform: scale(2.3); /* FF */
+  -webkit-transform: scale(2.3); /* Safari and Chrome */
+  -o-transform: scale(2.3); /* Opera */
+  transform: scale(2.3);
+  opacity: 0;
+  cursor: pointer;
+}
 
-  .nav__container{
-    display: none;
-  }
-  input:checked ~ ul{
-    padding-top: 3.6rem;
-    margin-top: 2.4rem;
-    display: flex;
-    flex-direction: column;
-    //justify-content: space-between;
-    align-items: center;
-    row-gap: 2.4rem;
+.nav__container{
+  display: none;
+}
+input:checked ~ ul{
+  padding-top: 3.6rem;
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  align-items: center;
+  row-gap: 2.4rem;
 
-    background-color: $bg_color;
-    //margin-right: -4Rem;
-    width: 100vw;
-    height: 100vh;
-  }
-  input:checked ~ .layer2{
-    display: none;
-  }
-  input:checked ~ .layer3{
-    display: block;
-    margin-left: 3.6rem;
+  background-color: $bg_color;
+  //margin-right: -4Rem;
+  width: 100vw;
+  height: 100vh;
+}
+input:checked ~ .layer2{
+  display: none;
+}
+input:checked ~ .layer3{
+  display: block;
+  //margin-left: 3.6rem;
 
-  }
-  input:checked ~ .layer3, input:checked {
-    margin-left: 3.6rem;
+}
+input:checked ~ .layer3, input:checked {
+  margin-left: 3.6rem;
 
-  }
+}
 
-@media (min-width: 800px){
+@media (min-width: 650px){
 
   .nav{
     &__container{
@@ -132,21 +135,19 @@ nav.nav li a:hover:after {
       margin-right: 2.4rem;
     }
 
-    }
+  }
 
 
- nav input, nav.nav div#menuToggle div.navIcon .layer2 {
+  nav input, nav.nav div#menuToggle div.navIcon .layer2 {
     position: absolute;
     overflow: hidden;
     clip:rect(0 0 0 0);
-    height: 0.1rem;
-    width: 0.1rem;
-    margin: -0.1rem;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
     padding: 0;
     border:0;
   }
 
 
 }
-
-

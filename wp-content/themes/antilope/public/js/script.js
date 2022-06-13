@@ -22,7 +22,26 @@ var DW_Controller = /*#__PURE__*/function () {
 
   _createClass(DW_Controller, [{
     key: "run",
-    value: function run() {}
+    value: function run() {
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 10;
+          reveals[i].classList.add('js');
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+    }
   }]);
 
   return DW_Controller;
